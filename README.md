@@ -26,12 +26,16 @@ Geimflaug.prototype.fly = function(){
     this.speed = this.speed + 1;
 };
 
-g1.fly();
-
 g1.setLife = function(){
     this.life = this.life + 1;
 };
 ```  
 **4. class**  
-
-
+```javascript
+class Geimflaug {
+	constructor(speed, life) {
+		this.speed = 10;
+		this.life = 10;
+	}
+};
+```
