@@ -7,7 +7,7 @@ Býr til fallið Book, this.isbn til að Book objectinn geti sett gildið inn í
 Setur fall inn í Book með prototype aðferðinni.
 Býr til nýjann object og notar Book fallið sem smið.  
 
-**3. Kóði:**  
+**3. Kóði a:**  
 ```javascript
 function Geimflaug(){
     this.speed = 10;
@@ -29,6 +29,28 @@ Geimflaug.prototype.fly = function(){
 g1.setLife = function(){
     this.life = this.life + 1;
 };
+```  
+**3. Kóði b:**  
+```javascript
+function Geimflaug(speed, life){
+    this.speed = speed;
+    this.life = life;
+};
+
+let g1 = new Geimflaug(10, 10);
+let g2 = new Geimflaug(10, 10);
+let g3 = new Geimflaug(10, 10);
+
+g1.speed = 15;
+g2.speed = 12;
+g3.speed = 11;
+
+Geimflaug.prototype.fly = function(speedUp) {
+    this.speed += speedUp
+}
+g1.fly(1)
+g2.fly(1)
+g3.fly(1)
 ```  
 **4. class**  
 ```javascript
