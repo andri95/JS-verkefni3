@@ -51,6 +51,12 @@ Geimflaug.prototype.fly = function(speedUp) {
 g1.fly(1)
 g2.fly(1)
 g3.fly(1)
+
+Geimflaug.prototype.setLife = function(lifeUp) {
+    this.life += lifeUp
+}
+
+g1.setLife(1)
 ```  
 **4. class**  
 ```javascript
